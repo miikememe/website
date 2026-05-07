@@ -77,11 +77,53 @@ a { color: inherit; text-decoration: none; }
 .nav a:hover, .nav a[aria-current="page"] { border-bottom-color: var(--text); }
 
 /* ==========================================================================
-   Hero (homepage placeholder)
+   Hero
    ========================================================================== */
 .hero {
   padding: clamp(3rem, 10vw, 7rem) var(--pad);
   max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* Video hero variant — homepage */
+.hero--video {
+  position: relative;
+  overflow: hidden;
+  min-height: 85vh;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  padding-inline: var(--pad);
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-video::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+.hero-video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100%;
+  min-width: 177.78vh;
+  border: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max);
+  width: 100%;
   margin: 0 auto;
 }
 .hero h1 {
