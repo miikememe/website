@@ -125,10 +125,137 @@ a { color: inherit; text-decoration: none; }
 .social svg { width: 1.25rem; height: 1.25rem; fill: currentColor; }
 
 /* ==========================================================================
+   Inner pages — shared shell
+   ========================================================================== */
+
+/* Re-uses .hero for the top of every inner page; no extra rules needed. */
+
+/* Section block (used by About, What I Do, etc.) */
+.section {
+  padding: clamp(2rem, 6vw, 4rem) var(--pad);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.section + .section { padding-top: 0; }
+
+.section h2 {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem;
+}
+.section h2 em { font-style: italic; font-weight: 700; }
+
+/* Lowercase subheading style — About page brand pattern */
+.subhead {
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--text-dim);
+  margin: 0 0 0.5rem;
+}
+
+.section p { max-width: 60ch; margin: 0 0 1rem; }
+.section p.lead { font-size: 1.125rem; max-width: 50ch; color: var(--text-dim); }
+
+/* Two-column row — About page (text left, photo right) */
+.row-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .row-2col { grid-template-columns: 1.2fr 1fr; }
+  .row-2col.reverse { grid-template-columns: 1fr 1.2fr; }
+  .row-2col.reverse .row-2col__media { order: -1; }
+}
+
+/* Tilted photo treatment — About */
+.tilt {
+  transform: rotate(7deg);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.tilt.tilt-left { transform: rotate(-7deg); }
+
+/* Placeholder media box (used until real images/videos are dropped in) */
+.placeholder {
+  background: var(--bg-alt);
+  border: 1px dashed rgba(235,226,210,0.15);
+  border-radius: 6px;
+  aspect-ratio: 4 / 3;
+  display: grid; place-items: center;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Grids */
+.grid-3, .grid-2 {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+.grid-3 { grid-template-columns: 1fr; }
+.grid-2 { grid-template-columns: 1fr; }
+@media (min-width: 700px) {
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Squircle image mask — What I Do cards */
+.squircle {
+  border-radius: 28% / 22%;     /* soft squircle look */
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+/* Card (used by What I Do + 3D Prints + Other Projects) */
+.card h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+.card p { color: var(--text-dim); margin: 0; font-size: 0.95rem; }
+
+/* Video card (Drone Work) — keeps 16:9 frame for embeds */
+.video-card .placeholder { aspect-ratio: 16 / 9; }
+
+/* Contact info column */
+.contact-grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 800px) {
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+}
+.contact-info p { margin: 0 0 0.5rem; }
+.contact-info a { border-bottom: 1px solid rgba(235,226,210,0.25); }
+.contact-info a:hover { border-bottom-color: var(--text); }
+
+/* ==========================================================================
    Mobile tweaks
    ========================================================================== */
 @media (max-width: 600px) {
   .site-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .nav { gap: 1rem; }
   .nav a { font-size: 0.875rem; }
+  .tilt, .tilt.tilt-left { transform: none; }    /* keep mobile tidy */
+}
+
+/* Reduced motion — respect user preference for any future animations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
