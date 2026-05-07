@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (in case we add any tooling later)
+node_modules/
+
+# OS
+Thumbs.db
+ehthumbs.db
