@@ -23,18 +23,27 @@
     <nav class="nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="what-i-do.html">What I Do</a>
-      <a href="drone-work.html" aria-current="page">Drone Work</a>
-      <a href="3d-prints.html">3D Prints</a>
-      <a href="other-projects.html">Other Projects</a>
+      <div class="nav-group">
+        <a href="what-i-do.html">What I Do</a>
+        <div class="nav-dropdown">
+          <a href="drone-work.html" aria-current="page">Drone Work</a>
+          <a href="3d-prints.html">3D Prints</a>
+          <a href="other-projects.html">Other Projects</a>
+        </div>
+      </div>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Drone work.</h1>
-      <p>A few projects I've shot from the air. Click through to watch.</p>
+    <section class="hero hero--video">
+      <div class="hero-video">
+        <img src="assets/homepage.gif" alt="">
+      </div>
+      <div class="hero-content">
+        <h1>Telling stories from the air.</h1>
+        <p>A few projects I've shot from the air. Click through to watch.</p>
+      </div>
     </section>
 
     <section class="section">

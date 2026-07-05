@@ -76,6 +76,83 @@ a { color: inherit; text-decoration: none; }
 }
 .nav a:hover, .nav a[aria-current="page"] { border-bottom-color: var(--text); }
 
+/* Dropdown */
+.nav-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-group > a { border-bottom-color: transparent !important; }
+.nav-group > a[aria-current="page"] { border-bottom-color: var(--text) !important; }
+.nav-group > a::after {
+  content: ' ▾';
+  font-size: 1.3em;
+  opacity: 0.9;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.nav-group:hover > a::after { transform: rotate(-180deg); }
+
+/* invisible bridge — prevents gap from breaking hover */
+.nav-group::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+}
+
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.nav-dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  border: 1px solid rgba(235,226,210,0.08);
+  border-radius: 10px;
+  padding: 0.35rem 0;
+  min-width: 148px;
+  z-index: 100;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+}
+.nav-group:hover .nav-dropdown,
+.nav-group:focus-within .nav-dropdown {
+  display: flex;
+  animation: dropdown-in 0.15s ease forwards;
+}
+.nav-dropdown a {
+  padding: 0.55rem 1.1rem;
+  white-space: nowrap;
+  border-bottom: none;
+  font-size: 0.9rem;
+  transition: background 0.12s ease;
+}
+.nav-dropdown a:hover { background: rgba(235,226,210,0.07); border-bottom: none; }
+.nav-dropdown a[aria-current="page"] { border-bottom: none; color: var(--text-dim); }
+
+@media (max-width: 600px) {
+  .nav-group { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .nav-group::after { display: none; }
+  .nav-dropdown {
+    display: flex;
+    position: static;
+    transform: none;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 1rem;
+    gap: 0.5rem;
+    animation: none;
+  }
+}
+
 /* ==========================================================================
    Hero
    ========================================================================== */
