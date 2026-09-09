@@ -12,18 +12,18 @@ The list is intentionally broken into small concrete steps. We'll work through i
 - [x] Identify any forms, embeds, or special features
 - [x] Decide what to drop (Store) and what to keep (everything else)
 - [x] Confirm new contact email is `info@memefpv.net`
-- [ ] Pick a hosting platform — leaning Cloudflare Pages, decision pending
-- [ ] Confirm 3D Printing page targets ("Submit idea" / "Browse creations")
-- [ ] Decide on phone-on-contact-page question
+- [x] Pick a hosting platform — **GitHub Pages** (repo `miikememe/website`)
+- [x] Confirm 3D Printing page targets — gallery only, no pricing pitch
+- [x] Decide on phone-on-contact-page question — removed
 - [ ] Email migration plan (Microsoft email — already handled per Mike, just need `info@memefpv.net` mailbox/forward set up before launch)
 - See full audit: `site-audit.md`
 
 ## Phase 2 — Account & tool setup
 
-- [ ] Install a code editor (VS Code is free and beginner-friendly)
-- [ ] Create a free GitHub account (for storing your code and auto-deploys)
+- [x] Install a code editor
+- [x] Create a free GitHub account
 - [ ] Create an account on the chosen host (e.g. Cloudflare)
-- [ ] Set up a project folder on your computer for the site
+- [x] Set up a project folder on your computer for the site
 
 ## Phase 3 — Pull content out of Squarespace
 
@@ -50,13 +50,19 @@ The list is intentionally broken into small concrete steps. We'll work through i
   - [x] About (`about.html`)
   - [x] What I Do (`what-i-do.html`)
   - [x] Drone Work (`drone-work.html`)
-  - [x] 3D Prints (`3d-prints.html`)
-  - [x] Other Projects (`other-projects.html`)
+  - [x] 3D Printing (`3d-prints.html`)
+  - [x] RC & Builds (`rc-builds.html`)
+  - [x] Homelab & Code (`homelab.html`)
   - [x] Contact (`contact.html`)
+  - [x] 404 (`404.html`)
 - [x] Style everything with one shared CSS file (`style.css`)
-- [ ] Make sure it looks good on mobile (responsive layout) — homepage tuned, verify the 6 new pages on a phone
+- [x] Make sure it looks good on mobile — hamburger nav added, all 8 pages checked at 390px
 - [x] Add favicon, page titles, and SEO meta tags (bird favicon + title + description on every page)
-- [ ] Add a contact method — Contact page is built with `mailto:info@memefpv.net`; still need to drop the published Microsoft Forms URL into the "Open the contact form" button (currently `#`)
+- [ ] Add a contact method — Contact page is built; still need to drop the published Microsoft Forms URL into the "Open the project form" button (currently `#`)
+- [x] Add Open Graph / social share tags, sitemap.xml, robots.txt, 404 page, CNAME
+- [x] Compress media — 52 MB hero GIF re-encoded to a 1.1 MB MP4; portrait 1.5 MB → 73 KB
+- [ ] Replace the nine dashed image placeholders with real photos
+- [ ] Add the four YouTube embeds on `drone-work.html`
 
 ## Phase 6 — Test locally
 
@@ -67,8 +73,8 @@ The list is intentionally broken into small concrete steps. We'll work through i
 
 ## Phase 7 — Deploy to the web
 
-- [ ] Push the project to GitHub
-- [ ] Connect the host to your GitHub repo
+- [x] Push the project to GitHub
+- [x] Connect the host to your GitHub repo
 - [ ] Verify the site works at the host's preview URL (e.g. `your-site.pages.dev`)
 - [ ] Fix anything that broke between local and production
 
@@ -88,7 +94,7 @@ The list is intentionally broken into small concrete steps. We'll work through i
 - [ ] Cancel the Squarespace subscription (only after everything's confirmed working)
 - [ ] Set up basic analytics (Cloudflare Web Analytics is free, no cookie banner needed)
 - [ ] Save a backup copy of the project locally and to GitHub
-- [ ] Write a short note for yourself: "How to update my site" (so future-you knows)
+- [x] Write a short note for yourself: "How to update my site" — see `README.md`
 
 ---
 

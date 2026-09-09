@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mike Meme — drone work, 3D prints, and other projects</title>
-  <meta name="description" content="Personal portfolio of Mike's drone work, 3D prints, and other projects. Based in North Georgia.">
+  <title>Meme Works — builds, 3D printing and aerial video in North Georgia</title>
+  <meta name="description" content="Custom builds, 3D printing and prototyping, homelab setup and FPV aerial video. One workshop in North Georgia. FAA Part 107 certified and commercially insured.">
+  <link rel="canonical" href="https://memefpv.net/">
+  <meta name="theme-color" content="#181818">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Meme Works">
+  <meta property="og:title" content="Meme Works — builds, 3D printing and aerial video in North Georgia">
+  <meta property="og:description" content="Custom builds, 3D printing and prototyping, homelab setup and FPV aerial video. One workshop in North Georgia. FAA Part 107 certified and commercially insured.">
+  <meta property="og:url" content="https://memefpv.net/">
+  <meta property="og:image" content="https://memefpv.net/assets/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Archivo from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,118 +23,140 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/bird.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
 <body>
 
-  <!-- Header (will appear on every page) -->
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <a class="logo" href="index.html" aria-label="Mike Meme home">
-      <span class="wordmark">MIKE MEME</span>
+    <a class="logo" href="index.html" aria-label="Meme Works — home">
+      <span class="wordmark">MEME <span class="works">WORKS</span></span>
     </a>
-    <nav class="nav" aria-label="Primary">
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+<nav class="nav" id="site-nav" aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
       <div class="nav-group">
         <a href="what-i-do.html">What I Do</a>
         <div class="nav-dropdown">
           <a href="drone-work.html">Drone Work</a>
-          <a href="3d-prints.html">3D Prints</a>
-          <a href="other-projects.html">Other Projects</a>
+          <a href="3d-prints.html">3D Printing</a>
+          <a href="rc-builds.html">RC &amp; Builds</a>
+          <a href="homelab.html">Homelab &amp; Code</a>
         </div>
       </div>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Drone work, 3D prints, <em>and other projects.</em></h1>
-      <p>I'm Mike — I build, fly, and print things from North Georgia. Have a look around.</p>
-      <a class="btn" href="contact.html">Get in touch</a>
+  <main id="main">
+    <section class="hero hero--video">
+      <div class="hero-media">
+        <video src="assets/hero.mp4" poster="assets/hero-poster.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Builds · prints · aerial video</p>
+        <h1>Things I build, print, <em>and</em> fly.</h1>
+        <p>One bench in North Georgia turning out RC builds, printed parts, homelab hardware and aerial video — and I take on work across all of it.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html">Start a project</a>
+          <a class="btn btn--ghost" href="what-i-do.html">What I take on</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Marquee strip -->
     <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>LIVE MUSIC &amp; EVENTS</span><span>•</span>
-        <span>FESTIVALS</span><span>•</span>
-        <span>3D PRINTING</span><span>•</span>
-        <span>FPV PILOT</span><span>•</span>
-        <span>SELF-HOSTING</span><span>•</span>
-        <span>WAKE SURFING</span><span>•</span>
-        <span>TRAVELLING</span><span>•</span>
-        <span>LIVE MUSIC &amp; EVENTS</span><span>•</span>
-        <span>FESTIVALS</span><span>•</span>
-        <span>3D PRINTING</span><span>•</span>
-        <span>FPV PILOT</span><span>•</span>
-        <span>SELF-HOSTING</span><span>•</span>
-        <span>WAKE SURFING</span><span>•</span>
-        <span>TRAVELLING</span><span>•</span>
-        <span>LIVE MUSIC &amp; EVENTS</span><span>•</span>
-        <span>FESTIVALS</span><span>•</span>
-        <span>3D PRINTING</span><span>•</span>
-        <span>FPV PILOT</span><span>•</span>
-        <span>SELF-HOSTING</span><span>•</span>
-        <span>WAKE SURFING</span><span>•</span>
-        <span>TRAVELLING</span><span>•</span>
-        <span>LIVE MUSIC &amp; EVENTS</span><span>•</span>
-        <span>FESTIVALS</span><span>•</span>
-        <span>3D PRINTING</span><span>•</span>
-        <span>FPV PILOT</span><span>•</span>
-        <span>SELF-HOSTING</span><span>•</span>
-        <span>WAKE SURFING</span><span>•</span>
-        <span>TRAVELLING</span><span>•</span>
-      </div>
+      <div class="marquee-track"><span>3D PRINTING</span><span class="dot">/</span><span>FPV DRONES</span><span class="dot">/</span><span>RC BUILDS</span><span class="dot">/</span><span>PROTOTYPING</span><span class="dot">/</span><span>SELF-HOSTING</span><span class="dot">/</span><span>SOLDERING</span><span class="dot">/</span><span>AERIAL VIDEO</span><span class="dot">/</span><span>HOMELAB</span><span class="dot">/</span><span>3D PRINTING</span><span class="dot">/</span><span>FPV DRONES</span><span class="dot">/</span><span>RC BUILDS</span><span class="dot">/</span><span>PROTOTYPING</span><span class="dot">/</span><span>SELF-HOSTING</span><span class="dot">/</span><span>SOLDERING</span><span class="dot">/</span><span>AERIAL VIDEO</span><span class="dot">/</span><span>HOMELAB</span><span class="dot">/</span><span>3D PRINTING</span><span class="dot">/</span><span>FPV DRONES</span><span class="dot">/</span><span>RC BUILDS</span><span class="dot">/</span><span>PROTOTYPING</span><span class="dot">/</span><span>SELF-HOSTING</span><span class="dot">/</span><span>SOLDERING</span><span class="dot">/</span><span>AERIAL VIDEO</span><span class="dot">/</span><span>HOMELAB</span><span class="dot">/</span><span>3D PRINTING</span><span class="dot">/</span><span>FPV DRONES</span><span class="dot">/</span><span>RC BUILDS</span><span class="dot">/</span><span>PROTOTYPING</span><span class="dot">/</span><span>SELF-HOSTING</span><span class="dot">/</span><span>SOLDERING</span><span class="dot">/</span><span>AERIAL VIDEO</span><span class="dot">/</span><span>HOMELAB</span><span class="dot">/</span></div>
     </div>
 
-    <!-- Section cards -->
     <section class="section">
-      <div class="grid-3">
+      <div class="row-2col">
+        <div>
+          <p class="eyebrow">The through-line</p>
+          <h2>It all runs through the same bench.</h2>
+          <p>FPV sits at the intersection of everything I like: electronics, fabrication, and making a thing do something it shouldn't be able to. You don't fly a quad you didn't build — you solder it, you tune it, and you repair it at the field with the parts in your bag.</p>
+          <p>Those skills don't stay in one hobby. It's the same soldering iron on an RC car, the same CAD and slicer on a printed bracket, the same troubleshooting on a rack of servers in the basement. Different projects, one bench.
+        </div>
+        <div class="row-2col__media">
+          <div class="placeholder" style="aspect-ratio: 4 / 3;">Add a workbench photo — soldering iron, parts, work in progress<br>(landscape, ~1200&times;900)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Where it goes</p>
+        <h2>Four benches, one set of hands.</h2>
+      </div>
+      <div class="grid-4">
         <a class="card card-link" href="drone-work.html">
           <div class="squircle">
-            <div class="placeholder" style="aspect-ratio: 1 / 1;">Drone photo</div>
+            <div class="placeholder" style="aspect-ratio: 1 / 1;">Add a drone or aerial still<br>(square, ~800&times;800)</div>
           </div>
           <h3>Drone Work</h3>
-          <p>FPV and aerial video projects, shot from the air.</p>
+          <p>Aerial and FPV projects, and the aircraft built to shoot them.</p>
         </a>
         <a class="card card-link" href="3d-prints.html">
           <div class="squircle">
-            <div class="placeholder" style="aspect-ratio: 1 / 1;">Print photo</div>
+            <div class="placeholder" style="aspect-ratio: 1 / 1;">Add a print photo<br>(square, ~800&times;800)</div>
           </div>
-          <h3>3D Prints</h3>
-          <p>Functional parts, fun projects, one layer at a time.</p>
+          <h3>3D Printing</h3>
+          <p>Functional parts, prototypes and one-offs — designed and printed here.</p>
         </a>
-        <a class="card card-link" href="other-projects.html">
+        <a class="card card-link" href="rc-builds.html">
           <div class="squircle">
-            <div class="placeholder" style="aspect-ratio: 1 / 1;">Project photo</div>
+            <div class="placeholder" style="aspect-ratio: 1 / 1;">Add an RC car or build photo<br>(square, ~800&times;800)</div>
           </div>
-          <h3>Other Projects</h3>
-          <p>Homelab, code, hardware, and everything in between.</p>
+          <h3>RC &amp; Builds</h3>
+          <p>RC cars, quads and whatever else is on the bench. Assembly, wiring, tuning, repair.</p>
+        </a>
+        <a class="card card-link" href="homelab.html">
+          <div class="squircle">
+            <div class="placeholder" style="aspect-ratio: 1 / 1;">Add a rack or terminal photo<br>(square, ~800&times;800)</div>
+          </div>
+          <h3>Homelab &amp; Code</h3>
+          <p>Servers, networking and self-hosted services. Run at home, set up for others.</p>
         </a>
       </div>
     </section>
+
+    <div class="creds">
+      <ul>
+        <li>Designed and built in-house</li>
+        <li>FAA Part 107 certified &amp; insured</li>
+        <li>Based in North Georgia</li>
+      </ul>
+    </div>
+
+  <section class="cta-band">
+    <div class="inner">
+      <div>
+        <h2>Got something that needs building, printing or flying?</h2>
+        <p>Tell me what you're after and I'll come back with an approach and a real number.</p>
+      </div>
+      <a class="btn" href="contact.html">Start a project</a>
+    </div>
+  </section>
   </main>
 
-  <!-- Footer (will appear on every page) -->
   <footer class="site-footer">
-    <a class="logo" href="index.html" aria-label="Mike Meme home">
-      <span class="wordmark">MIKE MEME</span>
+    <a class="logo" href="index.html" aria-label="Meme Works — home">
+      <span class="wordmark">MEME <span class="works">WORKS</span></span>
     </a>
-    <div class="social">
-      <span>Find me online</span>
-      <a href="https://www.instagram.com/memefpv/" target="_blank" rel="noopener" aria-label="MemeFPV on Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23a3.7 3.7 0 0 1 .9-1.38 3.7 3.7 0 0 1 1.38-.9c.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2zm0 1.95c-3.13 0-3.51 0-4.74.07-1.06.05-1.64.22-2.02.37-.51.2-.87.43-1.25.81-.38.38-.61.74-.81 1.25-.15.38-.32.96-.37 2.02C2.74 8.49 2.7 8.87 2.7 12s.04 3.51.11 4.74c.05 1.06.22 1.64.37 2.02.2.51.43.87.81 1.25.38.38.74.61 1.25.81.38.15.96.32 2.02.37 1.23.07 1.61.07 4.74.07s3.51 0 4.74-.07c1.06-.05 1.64-.22 2.02-.37.51-.2.87-.43 1.25-.81.38-.38.61-.74.81-1.25.15-.38.32-.96.37-2.02.07-1.23.07-1.61.07-4.74s0-3.51-.07-4.74c-.05-1.06-.22-1.64-.37-2.02a3.32 3.32 0 0 0-.81-1.25 3.32 3.32 0 0 0-1.25-.81c-.38-.15-.96-.32-2.02-.37-1.23-.07-1.61-.07-4.74-.07zm0 3.32a4.53 4.53 0 1 1 0 9.06 4.53 4.53 0 0 1 0-9.06zm0 7.48a2.95 2.95 0 1 0 0-5.9 2.95 2.95 0 0 0 0 5.9zm5.77-7.66a1.06 1.06 0 1 1-2.12 0 1.06 1.06 0 0 1 2.12 0z"/>
-        </svg>
-      </a>
-      <a href="https://github.com/miikememe" target="_blank" rel="noopener" aria-label="Mike Meme on GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 20.86c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/>
-        </svg>
-      </a>
+    <div class="footer-right">
+      <span class="footer-meta">Builds, prints &amp; aerial video · North Georgia</span>
+      <div class="social">
+        <a href="https://www.instagram.com/memefpv/" target="_blank" rel="noopener" aria-label="MemeFPV on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23a3.7 3.7 0 0 1 .9-1.38 3.7 3.7 0 0 1 1.38-.9c.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2zm0 1.95c-3.13 0-3.51 0-4.74.07-1.06.05-1.64.22-2.02.37-.51.2-.87.43-1.25.81-.38.38-.61.74-.81 1.25-.15.38-.32.96-.37 2.02C2.74 8.49 2.7 8.87 2.7 12s.04 3.51.11 4.74c.05 1.06.22 1.64.37 2.02.2.51.43.87.81 1.25.38.38.74.61 1.25.81.38.15.96.32 2.02.37 1.23.07 1.61.07 4.74.07s3.51 0 4.74-.07c1.06-.05 1.64-.22 2.02-.37.51-.2.87-.43 1.25-.81.38-.38.61-.74.81-1.25.15-.38.32-.96.37-2.02.07-1.23.07-1.61.07-4.74s0-3.51-.07-4.74c-.05-1.06-.22-1.64-.37-2.02a3.32 3.32 0 0 0-.81-1.25 3.32 3.32 0 0 0-1.25-.81c-.38-.15-.96-.32-2.02-.37-1.23-.07-1.61-.07-4.74-.07zm0 3.32a4.53 4.53 0 1 1 0 9.06 4.53 4.53 0 0 1 0-9.06zm0 7.48a2.95 2.95 0 1 0 0-5.9 2.95 2.95 0 0 0 0 5.9zm5.77-7.66a1.06 1.06 0 1 1-2.12 0 1.06 1.06 0 0 1 2.12 0z"/></svg></a>
+        <a href="https://github.com/miikememe" target="_blank" rel="noopener" aria-label="Mike on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 20.86c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg></a>
+      </div>
     </div>
   </footer>
 
+  <script src="site.js" defer></script>
 </body>
 </html>
