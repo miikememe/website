@@ -401,13 +401,26 @@ a { color: inherit; text-decoration: none; }
 }
 .card .card-num + h3 { margin-top: 0.15rem; }
 
-/* Video card — 16:9 frame for YouTube embeds */
+/* Video embeds — 16:9 frame for YouTube */
 .video-card .placeholder { aspect-ratio: 16 / 9; }
-.video-card .embed {
+.embed {
   position: relative; aspect-ratio: 16 / 9;
   border-radius: 8px; overflow: hidden; background: #000;
 }
-.video-card .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Featured showreel — the one big embed at the top of Drone Work */
+.embed--feature {
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.55);
+}
+.section p.media-caption {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  max-width: 62ch;
+  margin: 1.15rem 0 0;
+}
 
 /* ==========================================================================
    Marquee strip
