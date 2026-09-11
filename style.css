@@ -422,6 +422,39 @@ a { color: inherit; text-decoration: none; }
   margin: 1.15rem 0 0;
 }
 
+/* Service list — Homelab "what's running" */
+.svc { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--rule); }
+@media (min-width: 820px) {
+  .svc { grid-template-columns: 1fr 1fr; column-gap: clamp(2rem, 4vw, 3.5rem); }
+}
+.svc > div { padding: 1.15rem 0; border-bottom: 1px solid var(--rule); }
+.svc > div > h3 { font-size: 1.02rem; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 0.35rem; }
+.section .svc > div > p { margin: 0; font-size: 0.93rem; color: var(--text-dim); max-width: 46ch; }
+.svc .swap {
+  display: block; margin-top: 0.4rem;
+  font-size: 0.76rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--accent); opacity: 0.85;
+}
+
+/* Network diagram — Homelab */
+.diagram { margin: 0; }
+.diagram-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.diagram svg { display: block; width: 100%; min-width: 680px; height: auto; }
+.diagram .d-t { font-size: 14px; font-weight: 700; fill: var(--text); letter-spacing: -0.01em; }
+.diagram .d-s { font-size: 11.5px; fill: var(--text-dim); }
+.diagram svg text { font-family: inherit; }
+.section .diagram figcaption {
+  margin: 1.1rem 0 0; font-size: 0.85rem; color: var(--text-faint); max-width: 62ch;
+}
+.diagram .swipe { display: none; }
+@media (max-width: 720px) {
+  .diagram .swipe { display: inline; color: var(--text-dim); }
+  .diagram-scroll {
+    -webkit-mask-image: linear-gradient(to right, #000 86%, transparent 100%);
+            mask-image: linear-gradient(to right, #000 86%, transparent 100%);
+  }
+}
+
 /* ==========================================================================
    Marquee strip
    ========================================================================== */

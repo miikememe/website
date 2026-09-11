@@ -46,7 +46,6 @@
         <div class="nav-dropdown">
           <a href="drone-work.html">Drone Work</a>
           <a href="3d-prints.html">3D Printing</a>
-          <a href="rc-builds.html">RC &amp; Builds</a>
           <a href="homelab.html" aria-current="page">Homelab &amp; Code</a>
         </div>
       </div>
@@ -75,18 +74,151 @@
     </section>
 
     <section class="section">
-      <div class="grid-2">
-        <div class="card">
-          <div class="placeholder">Add a screenshot or photo</div>
-          <h3>Project name</h3>
-          <p>What it is, why you built it, and what you'd tell someone setting up the same thing.</p>
+      <div class="section-head">
+        <p class="eyebrow">What's running</p>
+        <h2>Nine things that used to be somebody's subscription.</h2>
+      </div>
+      <div class="svc">
+        <div>
+          <h3>Plex, with the library that feeds it</h3>
+          <p>Sonarr, Radarr, Lidarr and Prowlarr keep it stocked and organised so nobody has to go looking.</p>
+          <span class="swap">Replaces a stack of streaming subscriptions</span>
         </div>
-        <div class="card">
-          <div class="placeholder">Add a screenshot or photo</div>
-          <h3>Project name</h3>
-          <p>What it is, why you built it, and what you'd tell someone setting up the same thing.</p>
+        <div>
+          <h3>Network storage and backups</h3>
+          <p>A rack-mount NAS with an expansion unit, running redundant pools with hot spares. It started life as somewhere to put drone footage.</p>
+          <span class="swap">Replaces cloud storage, per seat, forever</span>
+        </div>
+        <div>
+          <h3>Network-wide ad and tracker blocking</h3>
+          <p>Pi-hole at the DNS layer, so it works on every device on the network — phones, TVs and the things you can't install a blocker on.</p>
+        </div>
+        <div>
+          <h3>Home automation</h3>
+          <p>Home Assistant as the brain, with Homebridge bringing the gear that refuses to speak HomeKit into line.</p>
+        </div>
+        <div>
+          <h3>Reverse proxy and real certificates</h3>
+          <p>Every internal service on a proper hostname with a valid certificate, so browsers and password managers stop treating the network like a hostile one.</p>
+        </div>
+        <div>
+          <h3>Monitoring and alerting</h3>
+          <p>Uptime Kuma watching every service, pushing to my phone the moment something stops answering — usually before anyone notices.</p>
+        </div>
+        <div>
+          <h3>Scheduled container updates</h3>
+          <p>Watchtower, opt-in per container and scheduled for the small hours. The two things that shouldn't auto-update are deliberately excluded and done by hand.</p>
+        </div>
+        <div>
+          <h3>Remote access</h3>
+          <p>A VPN back to the house instead of holes punched in the firewall. Nothing internal is exposed to the internet.</p>
+        </div>
+        <div>
+          <h3>Recipe manager</h3>
+          <p>Mealie. Small, but it makes the point: if a thing is worth a monthly fee, it's usually worth a container.</p>
+          <span class="swap">Replaces a paid recipe app</span>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">How it's laid out</p>
+        <h2>Segmented, so one bad device isn't everybody's problem.</h2>
+      </div>
+      <figure class="diagram">
+        <div class="diagram-scroll">
+          <svg viewBox="0 0 900 430" role="img" aria-labelledby="net-title net-desc">
+            <title id="net-title">Segmented home network layout</title>
+            <desc id="net-desc">The internet reaches a gateway firewall, then a managed switch, which splits the network into four isolated VLANs: trusted, IoT, cameras and guest. A Docker host, network storage and a UPS sit on the trusted segment. Wi-Fi access points hang off the switch.</desc>
+
+            <defs>
+              <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(235,226,210,0.4)"/>
+              </marker>
+            </defs>
+
+            <!-- top path -->
+            <line x1="152" y1="60" x2="196" y2="60" stroke="rgba(235,226,210,0.3)" stroke-width="1.5" marker-end="url(#ar)"/>
+            <line x1="372" y1="60" x2="416" y2="60" stroke="rgba(235,226,210,0.3)" stroke-width="1.5" marker-end="url(#ar)"/>
+            <line x1="592" y1="60" x2="636" y2="60" stroke="rgba(235,226,210,0.3)" stroke-width="1.5" marker-end="url(#ar)"/>
+
+            <g class="d-box">
+              <rect x="30" y="32" width="120" height="56" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
+              <text x="90" y="66" class="d-t" text-anchor="middle">Internet</text>
+            </g>
+            <g class="d-box">
+              <rect x="198" y="32" width="174" height="56" rx="7" fill="#1f1f1f" stroke="#e8442a" stroke-width="1.5"/>
+              <text x="285" y="56" class="d-t" text-anchor="middle">Gateway &amp; firewall</text>
+              <text x="285" y="74" class="d-s" text-anchor="middle">routing · VPN · IDS</text>
+            </g>
+            <g class="d-box">
+              <rect x="418" y="32" width="174" height="56" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
+              <text x="505" y="56" class="d-t" text-anchor="middle">Managed switch</text>
+              <text x="505" y="74" class="d-s" text-anchor="middle">VLAN tagging · PoE</text>
+            </g>
+            <g class="d-box">
+              <rect x="638" y="32" width="150" height="56" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
+              <text x="713" y="56" class="d-t" text-anchor="middle">Access points</text>
+              <text x="713" y="74" class="d-s" text-anchor="middle">SSID per VLAN</text>
+            </g>
+
+            <!-- bus down from the switch -->
+            <path d="M 505 88 L 505 140 M 120 140 L 780 140" stroke="rgba(235,226,210,0.25)" stroke-width="1.5" fill="none"/>
+            <path d="M 120 140 L 120 172 M 340 140 L 340 172 M 560 140 L 560 172 M 780 140 L 780 172"
+                  stroke="rgba(235,226,210,0.25)" stroke-width="1.5" fill="none"/>
+            <text x="516" y="128" class="d-s">four tagged segments</text>
+
+            <!-- VLAN pills -->
+            <g class="d-box">
+              <rect x="30" y="172" width="180" height="54" rx="27" fill="#232323" stroke="rgba(235,226,210,0.14)"/>
+              <text x="120" y="195" class="d-t" text-anchor="middle">Trusted</text>
+              <text x="120" y="212" class="d-s" text-anchor="middle">desktops · servers · NAS</text>
+            </g>
+            <g class="d-box">
+              <rect x="250" y="172" width="180" height="54" rx="27" fill="#232323" stroke="rgba(235,226,210,0.14)"/>
+              <text x="340" y="195" class="d-t" text-anchor="middle">IoT</text>
+              <text x="340" y="212" class="d-s" text-anchor="middle">no route to trusted</text>
+            </g>
+            <g class="d-box">
+              <rect x="470" y="172" width="180" height="54" rx="27" fill="#232323" stroke="rgba(235,226,210,0.14)"/>
+              <text x="560" y="195" class="d-t" text-anchor="middle">Cameras</text>
+              <text x="560" y="212" class="d-s" text-anchor="middle">no internet at all</text>
+            </g>
+            <g class="d-box">
+              <rect x="690" y="172" width="180" height="54" rx="27" fill="#232323" stroke="rgba(235,226,210,0.14)"/>
+              <text x="780" y="195" class="d-t" text-anchor="middle">Guest</text>
+              <text x="780" y="212" class="d-s" text-anchor="middle">internet only</text>
+            </g>
+
+            <!-- what sits on trusted -->
+            <path d="M 120 226 L 120 251 M 120 251 L 762 251 M 195 251 L 195 276 M 507 251 L 507 276 M 762 251 L 762 276" stroke="rgba(235,226,210,0.25)" stroke-width="1.5" fill="none"/>
+            <g class="d-box">
+              <rect x="30" y="276" width="330" height="124" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
+              <text x="50" y="302" class="d-t">Docker host</text>
+              <text x="50" y="326" class="d-s">Plex · Sonarr · Radarr · Lidarr · Prowlarr</text>
+              <text x="50" y="346" class="d-s">Pi-hole · Home Assistant · Homebridge</text>
+              <text x="50" y="366" class="d-s">Nginx Proxy Manager · Uptime Kuma</text>
+              <text x="50" y="386" class="d-s">Watchtower · Mealie</text>
+            </g>
+            <g class="d-box">
+              <rect x="382" y="276" width="250" height="124" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
+              <text x="402" y="302" class="d-t">Network storage</text>
+              <text x="402" y="326" class="d-s">redundant pools, hot spares</text>
+              <text x="402" y="346" class="d-s">nightly backups</text>
+              <text x="402" y="366" class="d-s">the footage archive that</text>
+              <text x="402" y="386" class="d-s">started all of this</text>
+            </g>
+            <g class="d-box">
+              <rect x="654" y="276" width="216" height="124" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
+              <text x="674" y="302" class="d-t">Rack UPS</text>
+              <text x="674" y="326" class="d-s">clean shutdown on</text>
+              <text x="674" y="346" class="d-s">an extended outage</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><span class="swipe">Scroll the diagram sideways to see all of it. </span>Representative layout — the same shape I'd build for someone else. Addressing and hostnames left off on purpose.</figcaption>
+      </figure>
     </section>
 
   <section class="cta-band">
