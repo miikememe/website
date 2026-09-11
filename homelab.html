@@ -76,45 +76,36 @@
     <section class="section">
       <div class="section-head">
         <p class="eyebrow">What's running</p>
-        <h2>Nine things that used to be somebody's subscription.</h2>
+        <h2>Six things that used to be somebody's subscription.</h2>
       </div>
       <div class="svc">
         <div>
-          <h3>Plex, with the library that feeds it</h3>
-          <p>Sonarr, Radarr, Lidarr and Prowlarr keep it stocked and organised so nobody has to go looking.</p>
-          <span class="swap">Replaces a stack of streaming subscriptions</span>
+          <h3>A streaming service for my own library</h3>
+          <p>Plex serves the media library straight off the NAS to every TV, phone and laptop in the house, and to anywhere else with an internet connection.</p>
+          <span class="swap">Replaces paying to stream a library I already have</span>
         </div>
         <div>
-          <h3>Network storage and backups</h3>
-          <p>A rack-mount NAS with an expansion unit, running redundant pools with hot spares. It started life as somewhere to put drone footage.</p>
-          <span class="swap">Replaces cloud storage, per seat, forever</span>
+          <h3>Camera recording that stays in the house</h3>
+          <p>Every camera and the video doorbell record continuously through UniFi Protect, with live view and playback on my phone from anywhere. The footage lives on hardware I own, not on someone else's servers.</p>
+          <span class="swap">Replaces a monthly cloud video plan</span>
         </div>
         <div>
-          <h3>Network-wide ad and tracker blocking</h3>
-          <p>Pi-hole at the DNS layer, so it works on every device on the network — phones, TVs and the things you can't install a blocker on.</p>
+          <h3>Network storage</h3>
+          <p>A rack-mount Synology with an expansion unit, roughly 50&nbsp;TB raw, with the main pool in RAID so a failed drive is a swap and not a loss. Reachable from anywhere, without handing the files to a cloud provider.</p>
+          <span class="swap">Replaces a cloud storage plan, with room to spare</span>
         </div>
         <div>
-          <h3>Home automation</h3>
-          <p>Home Assistant as the brain, with Homebridge bringing the gear that refuses to speak HomeKit into line.</p>
+          <h3>Mac backups</h3>
+          <p>Time Machine backs the Macs up continuously to their own volume on the NAS. A dead drive costs an afternoon's restore, not the files.</p>
+          <span class="swap">Replaces a cloud backup subscription</span>
         </div>
         <div>
-          <h3>Reverse proxy and real certificates</h3>
-          <p>Every internal service on a proper hostname with a valid certificate, so browsers and password managers stop treating the network like a hostile one.</p>
+          <h3>Uptime monitoring and dashboards</h3>
+          <p>Uptime Kuma checks every service and alerts my phone the moment one stops answering. Grafana, Prometheus and Loki sit behind it for the long view: metrics, logs and trends over time.</p>
+          <span class="swap">Replaces a paid monitoring service</span>
         </div>
         <div>
-          <h3>Monitoring and alerting</h3>
-          <p>Uptime Kuma watching every service, pushing to my phone the moment something stops answering — usually before anyone notices.</p>
-        </div>
-        <div>
-          <h3>Scheduled container updates</h3>
-          <p>Watchtower, opt-in per container and scheduled for the small hours. The two things that shouldn't auto-update are deliberately excluded and done by hand.</p>
-        </div>
-        <div>
-          <h3>Remote access</h3>
-          <p>A VPN back to the house instead of holes punched in the firewall. Nothing internal is exposed to the internet.</p>
-        </div>
-        <div>
-          <h3>Recipe manager</h3>
+          <h3>Recipes and meal planning</h3>
           <p>Mealie. Small, but it makes the point: if a thing is worth a monthly fee, it's usually worth a container.</p>
           <span class="swap">Replaces a paid recipe app</span>
         </div>
@@ -150,7 +141,7 @@
             <g class="d-box">
               <rect x="198" y="32" width="174" height="56" rx="7" fill="#1f1f1f" stroke="#e8442a" stroke-width="1.5"/>
               <text x="285" y="56" class="d-t" text-anchor="middle">Gateway &amp; firewall</text>
-              <text x="285" y="74" class="d-s" text-anchor="middle">routing · VPN · IDS</text>
+              <text x="285" y="74" class="d-s" text-anchor="middle">routing · VPN · camera NVR</text>
             </g>
             <g class="d-box">
               <rect x="418" y="32" width="174" height="56" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
@@ -196,18 +187,18 @@
             <g class="d-box">
               <rect x="30" y="276" width="330" height="124" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
               <text x="50" y="302" class="d-t">Docker host</text>
-              <text x="50" y="326" class="d-s">Plex · Sonarr · Radarr · Lidarr · Prowlarr</text>
-              <text x="50" y="346" class="d-s">Pi-hole · Home Assistant · Homebridge</text>
-              <text x="50" y="366" class="d-s">Nginx Proxy Manager · Uptime Kuma</text>
-              <text x="50" y="386" class="d-s">Watchtower · Mealie</text>
+              <text x="50" y="326" class="d-s">Pi-hole · Nginx Proxy Manager</text>
+              <text x="50" y="346" class="d-s">Uptime Kuma · Mealie</text>
+              <text x="50" y="366" class="d-s">Grafana · Prometheus · Loki</text>
+              <text x="50" y="386" class="d-s">Watchtower</text>
             </g>
             <g class="d-box">
               <rect x="382" y="276" width="250" height="124" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>
               <text x="402" y="302" class="d-t">Network storage</text>
-              <text x="402" y="326" class="d-s">redundant pools, hot spares</text>
-              <text x="402" y="346" class="d-s">nightly backups</text>
-              <text x="402" y="366" class="d-s">the footage archive that</text>
-              <text x="402" y="386" class="d-s">started all of this</text>
+              <text x="402" y="326" class="d-s">RAID pool + expansion unit</text>
+              <text x="402" y="346" class="d-s">Plex media server</text>
+              <text x="402" y="366" class="d-s">Time Machine backups</text>
+              <text x="402" y="386" class="d-s">Homebridge</text>
             </g>
             <g class="d-box">
               <rect x="654" y="276" width="216" height="124" rx="7" fill="#1f1f1f" stroke="rgba(235,226,210,0.14)"/>

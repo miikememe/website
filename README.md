@@ -132,6 +132,7 @@ used on `drone-work.html`. These are what show up when someone pastes a link int
 | `3d-prints.html` | Printing and prototyping |
 | `rc-builds.html` | RC cars and bench builds |
 | `homelab.html` | Servers, networking, self-hosting |
+| `workshop.html` | The workshop and bench build — linked from the home page only, not in the nav yet |
 | `contact.html` | Email, Instagram, project form |
 
 ## Before launch — still to do
